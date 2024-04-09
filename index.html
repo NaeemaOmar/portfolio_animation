@@ -6,6 +6,9 @@
     <title>Portfolio Animation</title>
 </head>
 <body>
+    <div class="slideDown">
+        <h1>Hellow, this is the div for the slide-down heading</h1>
+    </div>
     <div class="blackBg">
         <h1>Hellow, this is the black background div</h1>
     </div>
@@ -18,10 +21,30 @@
     <div class="theRightSlide">
         <h1>This is the right-slide</h1>
     </div>
+    <div class="theTxtEffect">
+        <h1 class="txtAnimate">This is the text effect. Hooray!!</h1>
+    </div>
 </body>
 </html>
 
 <style>
+        .slideDown{
+        background-color: peru;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        animation-name: goDown;
+        animation-delay: 0.1s;
+        animation-duration: 10s;
+    }
+
+    @keyframes goDown{
+        from {
+            top: -200px
+        } to {
+            top: 0
+        }
+    }
     .blackBg{
         background-color: black;
         color: bisque;
@@ -87,5 +110,45 @@
             right: -50%
         }
     }
+    .theTxtEffect {
+  height: 200px;
+  width: 200px;
+  overflow: hidden; /* Ensure the text outside the container is hidden */
+}
+
+.txtAnimate {
+  color: transparent;
+  background: linear-gradient(to right, black 0%, black 50%, transparent 50%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: revealText 2s forwards; /* Animation shorthand */
+}
+
+@keyframes revealText {
+  0% {
+    background-position: 100% 0; /* Start from the right */
+  }
+  100% {
+    background-position: 0 0; /* Move to left */
+  }
+}
+
+
+
+/* Hella, hella lit txt Animation starts here */
+/* Number 1 fav = https://codepen.io/Sonick/pen/AwXJdM  */
+/* Text for testimonials pg promt = https://codepen.io/mellis84/details/JpVZNw */
+/* Maybe at the about page for hobbies? = https://codepen.io/yoannhel/pen/DMzjog */
+/* Absolutely amazing. Love this for the contact Page = https://codepen.io/FrankieDoodie/pen/dgVGad */
+/* Love this to bits and pieces. Either for about pg or projects info = https://codepen.io/StephenScaff/details/oLBqmw */
+/* Love this for the landing pg = https://codepen.io/short/pen/VyNqPa */
+/* Maybe this is better for contact pg = https://codepen.io/BRacicot/pen/Nryjpa */
+/* I think this fits my aesthetic better = https://codepen.io/abhishek/details/VKmGKY */
+/* Projects pg maybe = https://codepen.io/abdlkhn/pen/eYJPZYG */
+
+/* Hella, hella lit txt Animation ends here */
+
+
+
 
 </style>
